@@ -70,6 +70,8 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'SchoolApp.wsgi.application'
 
+CSRF_TRUSTED_ORIGINS = ['https://web-production-de7a9.up.railway.app']
+
 
 # Database — uses DATABASE_URL env var in production, SQLite locally
 DATABASES = {
