@@ -63,7 +63,10 @@ WSGI_APPLICATION = 'SchoolApp.wsgi.application'
 
 # Database — uses DATABASE_URL env var in production, SQLite locally
 DATABASES = {
-    'default': env.db('DATABASE_URL', default=f'sqlite:///{BASE_DIR}/db.sqlite3')
+    'default': env.db(
+        'DATABASE_URL',                              # looks for this env variable
+        default=f'sqlite:///{BASE_DIR}/db.sqlite3'  # uses this if DATABASE_URL not set
+    )
 }
 
 
